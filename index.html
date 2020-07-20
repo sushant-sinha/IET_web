@@ -7,106 +7,318 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-   <title>Ristorante Con Fusion</title>
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap-social.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- endbuild -->
+
+    <title>Ristorante Con Fusion</title>
 </head>
 
 <body>
 
-    <header  class="jumbotron">
+    <nav class="navbar navbar-inverse navbar-toggleable-sm fixed-top">
         <div class="container">
-            <div class="row row-header">
-                <div class="col-12 col-sm-6">
-                    <h1>Ristorante con Fusion</h1>
-                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="41"></a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                </ul>
+                <span class="navbar-text">
+                    <a id="buttonLogin" type="button" role="button">
+                        <span class="fa fa-sign-in"></span> Login</a>
+                    </span>
                 </div>
-                <div class="col-12 col-sm">
-                </div>
             </div>
-        </div>
-    </header>
-    <div class="container">
-    <div class="row row-content align-items-center">
-        <div>
-            <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Our Lipsmacking Culinary Creations</h3>
-            </div>
-            <div class="col col-sm order-sm-first col-md">
-                <h2>Uthappizza</h2>
-                <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
-            </div>
-        </div>
+        </nav>
 
-
-        <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 col-md-3">
-                <h3>This Month's Promotions</h3>
-            </div>
-            <div class="col col-sm col-md">
-                <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
-            </div>
-        </div>
-
-        <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Meet our Culinary Specialists</h3>
-            </div>
-            <div class="col col-sm order-sm-first col-md">
-                <h2>Alberto Somayya</h2>
-                <h4>Executive Chef</h4>
-                <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
-            </div>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">             
-                <div class="col-4 offset-1 col-sm-2">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-7 col-sm-5">
-                    <h5>Our Address</h5>
-                    <address>
-		              121, Clear Water Bay Road<br>
-		              Clear Water Bay, Kowloon<br>
-		              HONG KONG<br>
-		              Tel.: +852 1234 5678<br>
-		              Fax: +852 8765 4321<br>
-		              Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
-		           </address>
-                </div>
-                <div class="col-12 col-sm-4 align-self-center">
-                    <div class="text-center">
-                        <a href="http://google.com/+">Google+</a>
-                        <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
-                        <a href="http://www.linkedin.com/in/">LinkedIn</a>
-                        <a href="http://twitter.com/">Twitter</a>
-                        <a href="http://youtube.com/">YouTube</a>
-                        <a href="mailto:">Mail</a>
+        <div id="loginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Login </h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox"> Remember me
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary btn-sm">Sign in</button>
                     </div>
                 </div>
-           </div>
-           <div class="row justify-content-center">             
-                <div class="col-auto">
-                    <p>© Copyright 2018 Ristorante Con Fusion</p>
-                </div>
-           </div>
+            </div>
         </div>
-    </footer>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-</body>
 
-</html>
+        <header class="jumbotron">
+            <div class="container">
+
+                <div class="row row-header">
+                    <div class="col-12 col-sm-6">
+                        <h1>Ristorante con Fusion</h1>
+                        <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                    </div>
+                    <div class="col col-sm align-self-center" style="text-align: center;">
+                        <img src="img/logo.png" class="img-fluid">
+                    </div>
+                    <div class="col-12 col-sm align-self-center" style="text-align: center;">
+                        <a id="buttonReservation" type="button" class="btn btn-warning btn-sm btn-block" role="button">Reserve Table</a>
+                    </div>
+                </div>
+            </header>
+
+            <div id="reservationFormModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg" role="content">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Reserve a table </h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group row">
+                                    <label for="firstname" class="col-md-2 col-form-label">Number of Guests</label>
+                                    <div class="col-md-10">
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-secondary active">
+                                                <input type="radio" name="nbPeople" value="1" autocomplete="off" checked> 1
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="nbPeople" value="2" autocomplete="off"> 2
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="nbPeople" value="3" autocomplete="off"> 3
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="nbPeople" value="4" autocomplete="off"> 4
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="nbPeople" value="5" autocomplete="off"> 5
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="nbPeople" value="6" autocomplete="off"> 6
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="section" class="col-md-2 col-form-label">Section</label>
+                                    <div class="col-md-4">
+                                        <div class="btn-group" data-toggle="buttons">
+                                          <label class="btn btn-success active">
+                                            <input type="radio" name="section" value="nonsmoking" autocomplete="off" checked> Non-Smoking
+                                          </label>
+                                          <label class="btn btn-danger">
+                                            <input type="radio" name="section" value="smoking" autocomplete="off"> Smoking
+                                          </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="lastname" class="col-md-2 col-form-label">Date and Time</label>
+                                    <div class="col-md-4">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                            <input class="form-control" type="date" name="dateBooking" value="" placeholder="Date">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                                            <input class="form-control" type="hour" name="hourBooking" value="" placeholder="Time">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="offset-md-2 col-md-10">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                        <button type="submit" class="btn btn-primary">Reserve</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="row row-content">
+                    <div class="col">
+                        <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <img class="d-block img-fluid" src="img/uthappizza.png" alt="Uthappizza">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h2>HACKATHON <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-default">$4.99</span></h2>
+                                        <p class="hidden-xs-down">Gitcoin brings you their next two hackathons, with mouthwatering prizes as usual!
+Gitcoin and Arweave are teaming up to bring you the Open Web Incubator, a 6-week online hackathon program with an investment pool of $100,000 for winning projects that help build a decentralized web.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="data:image/png;base64,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" style="width:20%;">
+
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h2>Hack Off v3.0    <span class="badge badge-danger">NEW</span></h2>
+                                            <p>A 24-hour long hackathon, Hack Off is inviting young minds from all across the nation to come together to put up the most magnificent show the digital realm has ever seen.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block img-fluid" src="img/alberto.png" alt="Alberto">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h2>Alberto Somayya</h2>
+                                            <h4>Executive Chef</h4>
+                                            <p class="hidden-xs-down">Award winning three-star Michelin chef with wide
+                                                International experience having worked closely with
+                                                whos-who in the culinary world, he specializes in
+                                                creating mouthwatering Indo-Italian fusion experiences.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ol class="carousel-indicators">
+                                    <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#mycarousel" data-slide-to="1"></li>
+                                    <li data-target="#mycarousel" data-slide-to="2"></li>
+                                </ol>
+                                <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a>
+                                <button class="btn btn-danger btn-sm" id="carousel-button">
+                                    <span id="carousel-button-icon" class="fa fa-pause"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row row-content align-items-center">
+                        <div class="col-sm-4 col-md-3 flex-last">
+                            <h3>Our Lipsmacking Culinary Creations</h3>
+                        </div>
+                        <div class="col-sm col-md flex-first">
+                            <div class="media">
+                                <img class="d-flex mr-3 img-thumbnail align-self-center"
+                                src="img/uthappizza.png" alt="Uthappizza">
+                                <div class="media-body">
+                                    <h2 class="mt-0">HACKATHONS<span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-default">$4.99</span></h2>
+                                    <p class="hidden-xs-down">A unique combination of Indian Uthappam (pancake) and
+                                        Italian pizza, topped with Cerignola olives, ripe vine
+                                        cherry tomatoes, Vidalia onion, Guntur chillies and
+                                        Buffalo Paneer.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row row-content align-items-center">
+                            <div class="col-sm-4 col-md-3">
+                                <h3>This Month's Promotions</h3>
+                            </div>
+                            <div class="col-sm col-md">
+                                <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                            </div>
+                        </div>
+
+                        <div class="row row-content align-items-center">
+                            <div class="col-sm-4 col-md-3 flex-last">
+                                <h3>Meet our Culinary Specialists</h3>
+                            </div>
+                            <div class="col-sm col-md flex-first">
+                                <div class="media">
+                                    <img class="d-flex mr-3 img-thumbnail align-self-center"
+                                    src="img/alberto.png" alt="Alberto Somayya">
+                                    <div class="media-body">
+                                        <h2 class="mt-0">Alberto Somayya</h2>
+                                        <h4>Executive Chef</h4>
+                                        <p class="hidden-xs-down">Award winning three-star Michelin chef with wide
+                                            International experience having worked closely with
+                                            whos-who in the culinary world, he specializes in
+                                            creating mouthwatering Indo-Italian fusion experiences.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer class="footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-5 offset-1 col-sm-2">
+                                    <h5>Links</h5>
+                                    <ul class="list-unstyled">
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="./aboutus.html">About</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="./contactus.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 col-sm-5">
+                                    <h5>Our Address</h5>
+                                    <address>
+                                        121, Clear Water Bay Road<br>
+                                        Clear Water Bay, Kowloon<br>
+                                        HONG KONG<br>
+                                        <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
+                                        <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
+                                        <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
+                                    </address>
+                                </div>
+                                <div class="col col-sm-4 align-self-center">
+                                    <div style="text-align:center">
+                                        <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-auto">
+                                    <p>© Copyright 2015 Ristorante Con Fusion</p>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+
+                    <!-- build:js js/main.js -->
+                    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+                    <script src="node_modules/tether/dist/js/tether.min.js"></script>
+                    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+                    <script src="js/scripts.js"></script>
+                    <!-- endbuild -->
+
+                </body>
+
+                </html>
